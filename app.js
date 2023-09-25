@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 
 const corsOptions = {
-  origin: 'https://equivalenceua.github.io/Equivalence/'
+  origin: '*'
   };
 
 const app = express();
