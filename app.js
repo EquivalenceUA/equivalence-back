@@ -5,10 +5,6 @@ const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 
-const corsOptions = {
-  origin: 'http://localhost:4200'
-  };
-
 const app = express();
 
 
@@ -20,7 +16,7 @@ app.get('/', (req, res) => res.json('Equivalence API working'))
 
 mongoose
     .connect(
-        "mongodb+srv://admin:Barabolya987^@cluster0.i2iiqvu.mongodb.net/?retryWrites=true&w=majority"
+      MONGO_URL
     )
     .then(()=>app.listen(port))
     .then(()=>
